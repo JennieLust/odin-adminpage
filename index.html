@@ -20,6 +20,9 @@ TODO
 - header
 - sidebar content containers have non-symmetrical padding left-right
 - icons clickable
+- make search same height as dashboard title
+- rets of header
+- center search 
 
 -->
 
@@ -67,15 +70,31 @@ TODO
         <!-- make grid? two rows-->
         <div class="header-container">
             <!-- unsure how to layout-->
+            <div class="searchbar-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/3917/3917132.png">
+                <input type="text">
+            </div>
+            <div class="account-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/3917/3917270.png">
+                <a href=""><img src="https://cdn-icons.flaticon.com/png/128/2173/premium/2173478.png?token=exp=1660394069~hmac=5a02d0bd18b2db21a61f60e9f53bc0e3"></a>
+                <p>Corvo Attano</p>
+            </div>
+            <div class="account-info">
+                <img src="https://cdn-icons.flaticon.com/png/128/2173/premium/2173478.png?token=exp=1660394069~hmac=5a02d0bd18b2db21a61f60e9f53bc0e3">
+                <p>Hi there,</p>
+                <p>Corvo Attano (@carvo)</p>
+            </div>
+            <div class="content-buttons">
+                <button class="button">New</button>
+                <button class="button">Upload</button>
+                <button class="button">Share</button>
+            </div>
         </div>
 
 
-        <!--make grid with 2 cols, 4 rows (article boxes 3 rows big)-->
         <div class="content-container">
-            <!--grid area: 1, 2 / 1, 2-->
             <p class="project-title">Your Projects</p>
             <div class="project-container">
-            <!--grid area: 3, 4 / 1, 2-->
                 <div class="card-1">
                     <p>Super Cool Project</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ulla feugiat mauris non mauris malesuada, venenatis eleifend metus viverra.  </p>
@@ -132,13 +151,9 @@ TODO
                 </div>
             </div>
             <div class="content-side">
-                <p class="annoucement-title">Annoucements</p>
-                <!--grid area: 3, 4 / 3, 4-->
-
-                
+                <p class="annoucement-title">Annoucements</p>                
                 <p class="trending-title">Trending</p>
                 <!--extra div so apply drop-shadow to div w/ clip-path-->
-
                 <div class="announcements-container">
                     <div class="ann-1">
                         <p>Site Maintenance</p>
@@ -153,7 +168,6 @@ TODO
                         <p>Et pharetra pharetra massa massa ultricies mi. Velit aliquet sagittis id consectetur purus.</p>
                     </div>
                 </div>
-
                 <div class="trending-container">
                     <div class="twitters" id="tweet-1">
                         <img src="https://cdn-icons-png.flaticon.com/512/190/190664.png">
@@ -175,17 +189,9 @@ TODO
                         <a href="">@alex</a>
                         <p>Life Changing App</p>
                     </div>
-
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
-
-
-
 </body>
 </html>
