@@ -78,9 +78,6 @@ html, body {
 }
 
 
-
-
-
 .header-container {
     background-color: #F7FEE7;
     border-bottom: solid 5px #BEF264;
@@ -108,9 +105,16 @@ html, body {
     grid-column: 1 / 3;
     grid-row: 2 / 5 ;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(200px, 1fr) 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 50px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .project-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+    }
 }
 
 .project-container > div {
@@ -120,6 +124,22 @@ html, body {
     padding: 10px;
     -webkit-clip-path: inset(0px round 10px 10px 10px 10px);
     clip-path: inset(0px round 10px 10px 10px 10px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+.project-container > div > :first-child {
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color:#24360f;
+}
+
+.project-container > div > :last-child {
+    font-size: 14px;
+    color:#365314;
+    margin-top: 0px;
 }
 
 
@@ -130,7 +150,6 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 30px 1fr 30px 1fr;
     gap: 10px;
-    
 
 }
 
