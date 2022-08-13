@@ -175,25 +175,12 @@ body{
 }
 
 .content-side div {
-    filter: drop-shadow(3px 3px 2px rgba(86, 119, 49, 0.34));
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-
-}
-
-.content-side div > div {
-    border-left: 6px solid #65A30D;
+    border-radius: 15px;
     background-color: #F7FEE7;
-    padding: 10px;
-    -webkit-clip-path: inset(0px round 10px 10px 10px 10px);
-    clip-path: inset(0px round 10px 10px 10px 10px);
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-
+    box-shadow: 3px 3px 2px rgba(86, 119, 49, 0.242);
 }
 
 .announcements-title {
