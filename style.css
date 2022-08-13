@@ -88,10 +88,12 @@ html, body {
 
 .content-container {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr minmax(200px, 1fr);
     grid-template-rows: 30px 1fr 1fr 1fr;
+    /* doesn't give symet space between side and pr cards */
     gap: 10px;
     padding: 40px;
+    column-gap: 30px;
 }
 
 .project-title {
@@ -111,22 +113,49 @@ html, body {
     gap: 50px;
 }
 
-.project-container div {
+.project-container > div {
+
+    border-left: 6px solid #65A30D;
     background-color: #F7FEE7;
-    border-radius: 15px;
     padding: 10px;
-    border-left: 5px solid #65A30D;
+    -webkit-clip-path: inset(0px round 10px 10px 10px 10px);
+    clip-path: inset(0px round 10px 10px 10px 10px);
 }
+
 
 .content-side {
     grid-column: 3 / 4;
     grid-row: 1 / 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px 1fr;
+    gap: 10px;
+    
+
+}
+
+.content-side div {
+    border-left: 6px solid #65A30D;
+    background-color: #F7FEE7;
+    padding: 10px;
+    -webkit-clip-path: inset(0px round 10px 10px 10px 10px);
+    clip-path: inset(0px round 10px 10px 10px 10px);
 }
 
 .announcements-title {
-
+    grid-row: 1 / 2;
 }
 
 .announcements-container {
+    grid-row: 2 / 3;
     background-color: #F7FEE7;  
+}
+
+.trending-title {
+    grid-row: 3 / 4;
+}
+
+.trending-container {
+    grid-row: 4 / 5;
+    background-color: #F7FEE7;
 }
